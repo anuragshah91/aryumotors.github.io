@@ -7,21 +7,24 @@
     <title>Aryu Motors</title>
     <link rel="stylesheet" href="AryuMotors.css">
     <link rel="stylesheet" href="AryuMotorsResponsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header class="header">
         <div class="container nav">
             <div class="brand">
-                <div class="logo">AM</div>
+                <!-- <div class="logo">AM</div> -->
                 <div>
-                    <div style="font-weight:800">Aryu Motors</div>
-                    <div>Sales &#8226; Service &#8226; Spare parts</div>
+                    <!-- <div style="font-weight:800" class="Aryu-logo">Aryu Motors</div> -->
+                    <!-- <img src="image/AryuMotors1.jpeg" width="250" style="background-color: white;"> -->
+                    <img src="image/AryuMotors2.jpeg" width="250" style="background-color: white;">
+                    <div style="text-transform: uppercase; font-weight: 700; font-size: 16px;">&#8226; Sales &#8226; Service &#8226; Spare parts</div>
                 </div>
             </div>
             <nav>
@@ -32,7 +35,7 @@
                     <li><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
-            <a class="cta" href="#contact">Book Test Drive</a>
+            <a class="cta" href="#Contact">Book Test Drive</a>
         </div>
     </header>
 
@@ -106,7 +109,7 @@
                         </div>
                     </div>
                     <div class="button-section">
-                        <button>View details</button>
+                        <a href="viewDetais.html"><button>View details</button></a>
                         <button class="bto">Book Demo</button>
                     </div>
                 </aside>
@@ -117,7 +120,7 @@
                     </div>
                     <div class="price">
                         <div>
-                            <strong>MF 8055 MAGNATRAK</strong>
+                            <strong>Massey Ferguson 1035R</strong>
                             <div>50 HP &#8226; 3 cylinder &#8226; 12 forward gears</div>
                         </div>
                         <div class="start-price">
@@ -137,7 +140,7 @@
                     </div>
                     <div class="price">
                         <div>
-                            <strong>MF 8055 MAGNATRAK</strong>
+                            <strong>Massey Ferguson 1035 DI Ma..</strong>
                             <div>50 HP &#8226; 3 cylinder &#8226; 12 forward gears</div>
                         </div>
                         <div class="start-price">
@@ -157,7 +160,7 @@
                     </div>
                     <div class="price">
                         <div>
-                            <strong>MF 8055 MAGNATRAK</strong>
+                            <strong>Massey Ferguson 1035 DI Dost</strong>
                             <div>50 HP &#8226; 3 cylinder &#8226; 12 forward gears</div>
                         </div>
                         <div class="start-price">
@@ -177,7 +180,7 @@
                     </div>
                     <div class="price">
                         <div>
-                            <strong>MF 8055 MAGNATRAK</strong>
+                            <strong>Massey Ferguson 1035Tonner</strong>
                             <div>50 HP &#8226; 3 cylinder &#8226; 12 forward gears</div>
                         </div>
                         <div class="start-price">
@@ -302,11 +305,22 @@
                     <label for="phone">Phone</label>
                     <input id="phone" required placeholder="Mobile number" />
 
+                    <label for="Tehsil">Tehsil</label>
+                    <select id="Tehsil">
+                        <option value="abc">abc</option>
+                        <option value="">abc</option>
+                        <option value="">abc</option>
+                        <option value="">abc</option>
+                        <option value="">abc</option>
+                    </select>
+                    <!-- <input id="Tehsil" required placeholder="Salect Your Tehsil" /> -->
+
                     <label for="model">Interested model</label>
                     <select id="model">
-                        <option value="Mahindra 575 DI">Mahindra 575 DI</option>
-                        <option value="Sonalika 60 HP">Sonalika 60 HP</option>
-                        <option value="New Holland 50 HP">New Holland 50 HP</option>
+                        <option value="Mahindra 575 DI">Massey Ferguson 1035R</option>
+                        <option value="Massey Ferguson 1035 DI Mahasakti">Massey Ferguson 1035 DI Mahasakti</option>
+                        <option value="Massey Ferguson 1035 DI Dost">Massey Ferguson 1035 DI Dost</option>
+                        <option value="Massey Ferguson 1035Tonner">Massey Ferguson 1035Tonner</option>
                     </select>
                     <label for="msg">Message</label>
                     <textarea id="msg" rows="4" placeholder="Any message or preferred date for test drive"></textarea>
@@ -317,15 +331,14 @@
                 <div class="contact-info">
                     <div class="cont-det">
                         <h3 class="text">Contact Info</h3>
-                        <p>Raj Tractor Showroom<br>NH-69 Kulamandi bypass pawarkheda basti,, Hoshangabad 461110</p>
-                        <p style="font-weight: 700;color: black;padding: 1rem 0;">Phone: <a href="tel: +9144589884">+91
-                                924458 9884</a></p>
-                        <p>Email: sales@rajtractor.example</p>
+                        <p>ArYu Motors Tractor Showroom<br><i class="fa-solid fa-location-dot"></i>Itarsi Rd, near Nandan Dhaba (पोवार खेड़ा बस्ती, नंदन ढाबा के पास, Puwar Kheda Basti, Narmadapuram, Madhya Pradesh 461110</p>
+                        <p style="font-weight: 700;color: black;padding: 1rem 0;">Phone: <a href="tel: +9144589884">+91 62320 04043</a></p>
+                        <p>Email: aryumotors@gmail.com</p>
                     </div>
                     <div class="opening-detail">
                         <h3 class="text">Opening Hours</h3>
-                        <p>Mon - Sat: 9:00 AM - 7:00 PM<br>Sun: 10:00 AM - 4:00 PM</p>
-                        <button class="get-dir">Get Directions</button>
+                        <p>Mon - Sat: 9:00 AM - 8:00 PM<br>Sun: 10:00 AM - 4:00 PM</p>
+                        <a href="https://maps.app.goo.gl/ofSeySiPQukGAHiF6"><button class="get-dir"> Get Directions </button></a>
                     </div>
                 </div>
             </div>
@@ -343,12 +356,13 @@
             <div class="social">
                 <p><u>Social:</u></p>
                 <div class="social-media">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61579857279479"><i class="fa-brands fa-facebook"></i></a>
                     <a
                         href="https://www.instagram.com/aryu.motors?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
                             class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
                     <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.snapchat.com/add/aryumotors?share_id=wCNLW4BFio4&locale=en-GB"><i class="fa-brands fa-snapchat"></i></a>
                 </div>
             </div>
             <div class="copyright-section">

@@ -70,7 +70,7 @@
     } */
 
     header.header {
-        padding: 10px 16px;
+        padding: 0px 10px;
     }
 
     /* Enable hamburger menu if you add icon */
@@ -179,9 +179,9 @@
         gap: 18px;
     }
 
-    .cta {
+    /* .cta {
         display: none;
-    }
+    } */
 }
 
 /* ====== 420px (Very small phones) ====== */
@@ -215,6 +215,21 @@
     }
     
     .container {
-        padding: 10px;
+        padding: 10px 0;
+    }
+
+    .cta {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    .brand {
+        width: 235px;
+    }
+    .brand img {
+        width: 100%;
+    }
+    .sales-text {
+        font-size: 12px;
     }
 }

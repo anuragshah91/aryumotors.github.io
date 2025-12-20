@@ -3,6 +3,13 @@
    MOBILE FIRST RESPONSIVE DESIGN
 ----------------------------------------- */
 
+@media (max-width: 1399px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
 /* ====== 1200px (Large screens) ====== */
 @media (max-width: 1200px) {
     .container1 {

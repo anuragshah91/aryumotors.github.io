@@ -352,9 +352,9 @@ select {
 /* ====== 420px (Very small phones) ====== */
 @media (max-width: 420px) {
 
-    .header {
+    /* .header {
         padding: 0 0px;
-    }
+    } */
 
     .logo {
         align-items: center;
@@ -364,7 +364,7 @@ select {
         width: 100%;
     }
     .logo-text {
-        font-size: 10px;
+        font-size: 12px;
     }
     .cta {
         padding: 5px 8px;
@@ -372,8 +372,6 @@ select {
     }
     
     .container {
-        padding: 5px 0;
+        padding: 10px 0;
     }
-
-    
 }

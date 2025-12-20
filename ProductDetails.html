@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductDetails</title>
+    <link rel="stylesheet" href="ProductDetails.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container nav">
+            <!-- <div class="brand"> -->
+                <div class="logo">
+                    <div class="img"></div>
+                    <!-- <img src="image/AryuMotors2.jpeg" width="250px" style="background-color: white;"> -->
+                    <div class="logo-text"  style="text-transform: uppercase; font-weight: 700; ">&#8226; Sales &#8226;
+                        Service &#8226; Spare parts</div>
+                </div>
+            <!-- </div> -->
+            <nav>
+                <ul>
+                    <li><a href="#inventory">Inventory</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="#Contact">Book Test Drive</a>
+        </div>
+    </header>
+
+    <section class="product-banner">
+        <img id="image" alt="tractor-image" />
+    </section>
+
+    <!-- <img id="image" alt="Product Image" width="300"> -->
+
+    <main class="product-cont">
+        <section class="product-section">
+            <h4 class="MF-text">
+                <strong id="productTitle"></strong>
+                <br>
+                <span id="productSubtitle"></span>
+            </h4>
+
+            <div class="prd-block">
+                <table class="spec-table">
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+
+                <form id="contactForm">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" required placeholder="Your name" class="form-control" fdprocessedid="3fhj2s"/>
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Mobile number" pattern="[0-9]{10}" maxlength="10" class="form-control"/>
+
+                    <label for="Tehsil">Tehsil</label>
+                    <select id="Tehsil" class="form-select" aria-label="Default select example" fdprocessedid="nt1ns">
+                        <option value="">--Please chosse your Tehsil--</option>
+                        <option value="Narmadapuram">Narmadapuram</option>
+                        <option value="Babai">Babai</option>
+                        <option value="Itarsi">Itarsi</option>
+                        <option value="Seoni Malwa">Seoni Malwa</option>
+                        <option value="Sohagpur">Sohagpur</option>
+                        <option value="Pipalani">Pipalani</option>
+                        <option value="Bankhedi">Bankhedi</option>
+                    </select>
+
+                    <label for="model">Interested model</label>
+                    <select id="model" class="form-select" aria-label="Default select example" fdprocessedid="nt1ns">
+                        <option value="">ufyury</option>
+                    </select>
+                    <label for="msg">Message</label>
+                    <textarea id="msg" rows="4" placeholder="Any message or preferred date for test drive" class="form-control" fdprocessedid="3fhj2s"></textarea>
+
+                    <button type="submit">Send enquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-section">
+        <div class="fts">
+            <section class="section">
+                <h2>Why choose us</h2>
+                <p>Decades of experience in agriculture machinery, trainedd technicians and a large
+                    inventory of spares.</p>
+                </p>
+            </section>
+            <div class="social">
+                <p><u>Social:</u></p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/profile.php?id=61579857279479"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a
+                        href="https://www.instagram.com/aryu.motors?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.snapchat.com/add/aryumotors?share_id=wCNLW4BFio4&locale=en-GB"><i
+                            class="fa-brands fa-snapchat"></i></a>
+                </div>
+            </div>
+            <div class="copyright-section">
+                <div>Copyright © 2025 Aryu Motors Limited. All Rights Reserved.</div>
+                <div style="margin-left: 30%;">
+                    <p>Made with care • Call us for appointments</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="AryuMotors.js"></script>
+    <script src="ProductDetails.js"></script>
+</body>
+
+</html>

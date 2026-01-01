@@ -91,7 +91,7 @@ header.header {
     background-color: #0f172a;
 }
 
-/* hero */
+/* Main */
 
 .container1 {
     /* margin-left:180px ;
@@ -150,11 +150,12 @@ header.header {
 
 .hero-card img {
     height: 180px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .hero-img {
     text-align: center;
+    /* height: 180px; */
 }
 
 .price {
@@ -226,7 +227,21 @@ header.header {
     background-color: #ffffff;
     padding: 16px;
     border-radius: 12px;
+    border-top-right-radius: 50px;
     box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+    transition: all .3s;
+}
+
+.sales:hover {
+    background-image: url('image/service-bg.jpg');
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.sales:hover p {
+    color: #fff;
 }
 
 .text {
@@ -244,6 +259,7 @@ header.header {
     margin-block-end: 1em;
     color: var(--muted);
     unicode-bidi: isolate;
+    transition: all .3s;
 }
 
 /* Contact */
@@ -287,7 +303,7 @@ select {
     cursor: pointer;
 }
 
-.form-control{
+.form-control {
     margin-top: 6px;
 }
 
@@ -336,6 +352,20 @@ select {
     margin-top: 12px;
 }
 
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px
+}
+
+.gallery img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px
+}
+
 /* footer section */
 
 .footer-section {
@@ -353,12 +383,18 @@ select {
     display: flex;
 }
 
-.social p{
+#cpy-text {
+    margin-left: 30%;
+}
+
+.social p {
     margin: 0px;
 }
+
 .social-media {
     font-size: 1.3rem;
 }
-.social-media a{
+
+.social-media a {
     color: white;
 }

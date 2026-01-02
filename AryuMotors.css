@@ -135,6 +135,12 @@ header.header {
     color: #4b8ef1;
 }
 
+/* search-bar */
+.search-bar {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .hero-card {
     background-color: white;
     border-radius: 12px;

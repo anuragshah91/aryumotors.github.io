@@ -1,5 +1,5 @@
 
-document.getElementById("contactForm").addEventListener("submit", function (e) {
+let ContactForm = document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const name = document.getElementById("name").value.trim();
@@ -8,7 +8,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     const model = document.getElementById("model").value;
     const message = document.getElementById("msg").value.trim();
 
-    if (!name || !phone || !tehsil || !model ) {
+    if (!name || !phone || !tehsil || !model) {
         alert("Please fill all fields before submitting the enquiry.");
         return;
     }
@@ -18,20 +18,39 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
         return;
     }
 
+    const EnquiryDate = new Date().toLocaleDateString();
+
     const formData = {
         name,
         phone,
         tehsil,
         model,
-        message
+        message,
+        EnquiryDate
     };
 
     console.log("Enquiry Data:", formData);
-
-    alert("Enquiry submitted successfully!");
-
+    alert('Thanks ' + formData.name + " — we've received your enquiry. We'll call you shortly.");
     document.getElementById("contactForm").reset();
 });
 
+const search = () => {
+    const searchbox = document.getElementById("searchInput").value.toUpperCase();
+    const storeitems = document.getElementById("tractor-section")
+    const products = document.querySelectorAll(".hero-card")
+    const pname = document.getElementsByTagName("strong")
 
+    for (let i = 0; i < pname.length; i++) {
+        let match = products[i].getElementsByTagName('strong')[0];
 
+        if (match) {
+            let textvalue = match.textContent || match.innerHTML;
+            
+            if (textvalue.toUpperCase().indexOf(searchbox) > -1) {
+                products[i].style.display = "";
+            } else {
+                products[i].style.display = "none";
+            }
+        }
+    }
+}

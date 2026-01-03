@@ -86,6 +86,13 @@ header.header {
     font-weight: 700;
 }
 
+.cta:hover {
+    background-color: #c31d1d;
+    transition: background-color 0.3s ease;
+    /* box-shadow: none;
+    background-color: #059862 !important; */
+}
+
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
     background-color: #0f172a;
@@ -216,6 +223,13 @@ header.header {
     text-align: center;
 }
 
+.button-section button:hover {
+    /* text-decoration: none; */
+    /* background-color: #1c1e51; */
+    background-color: #e63946;
+    transition: background-color 0.2s ease;
+}
+
 .bto {
     margin-left: 10px;
 }
@@ -307,6 +321,10 @@ select {
     font-weight: 700;
     margin-top: 12px;
     cursor: pointer;
+}
+#contactForm button:hover {
+    /* background-color: #1c1e51; */
+    background: #0b7dda;
 }
 
 .form-control {

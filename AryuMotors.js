@@ -1,38 +1,34 @@
+let form = document.getElementById('contactForm');
+form.addEventListener("submit", (e) => {
+    e.preventDefault(); // Prevent the default form submission
 
-let ContactForm = document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const tehsil = document.getElementById("Tehsil").value;
-    const model = document.getElementById("model").value;
-    const message = document.getElementById("msg").value.trim();
-
-    if (!name || !phone || !tehsil || !model) {
-        alert("Please fill all fields before submitting the enquiry.");
-        return;
-    }
-
-    if (!/^[0-9]{10}$/.test(phone)) {
-        alert("Please enter a valid 10-digit mobile number.");
-        return;
-    }
-
-    const EnquiryDate = new Date().toLocaleDateString();
-
-    const formData = {
-        name,
-        phone,
-        tehsil,
-        model,
-        message,
-        EnquiryDate
+    const data = {
+        name: document.getElementById("name").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        tehsil: document.getElementById("Tehsil").value,
+        model: document.getElementById("model").value,
+        message: document.getElementById("msg").value.trim()
     };
 
-    console.log("Enquiry Data:", formData);
-    alert('Thanks ' + formData.name + " — we've received your enquiry. We'll call you shortly.");
-    document.getElementById("contactForm").reset();
-});
+    e.target.querySelector('button[type="submit"]').disabled = true; // Disable the submit button to prevent multiple submissions
+    e.target.querySelector('button[type="submit"]').innerText = "Submitting..."; //
+
+    fetch("https://script.google.com/macros/s/AKfycbylq4aT996pg7fFnowd4Dp6nrWZlNoyKK2KGVZPZevEUNk9CLW53_Qj4ms31YL1gC9z/exec", {
+        method: "POST",
+        body: JSON.stringify(data)
+    })
+
+        .then(res => res.json())
+        .then(() => {
+            alert("Enquiry submitted successfully!");
+
+            // e.target.querySelector('button[type="submit"]').disabled = false; // Re-enable the submit button
+            e.target.querySelector('button[type="submit"]').innerText = "Send enquiry"; // Restore button text
+
+            document.getElementById("contactForm").reset();
+        })
+        .catch(() => alert("Error submitting form"));
+})
 
 const search = () => {
     const searchbox = document.getElementById("searchInput").value.toUpperCase();
@@ -54,3 +50,4 @@ const search = () => {
         }
     }
 }
+
